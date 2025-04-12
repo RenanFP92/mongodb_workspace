@@ -1,0 +1,15 @@
+//crear una base de datos
+use("baticell_store")
+
+//Actualizar el precio de todos los celulares a 4500
+db.productos.updateMany(
+    {},//Esta condición de búsqueda es para todos los documentos
+    {
+        $set: {
+            precio: 4500,
+        }
+    }
+)
+
+//Listar documentos
+db.productos.find()

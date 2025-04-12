@@ -1,0 +1,18 @@
+//Crear base de datos -> crear la colección -> crear el documento -> crear los atributos (estrucutra de como se hace los datos)
+
+//Crear una base de datos (para que pueda existir debe tener una colección)
+use("baticell_store")
+
+//Crear una colección "productos" agregandole un documento  (osea lo 
+// que seria la tabla en SQL server)
+
+/* db.productos.insertOne(
+    {
+        name: "Samsung",
+        precio: 3500,
+    }
+) */
+
+//Listar documentos (se debe comentar el creador de coleccion por que crearia
+//la misma colección pero con otro ID)
+db.productos.find()

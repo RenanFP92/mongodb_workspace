@@ -1,0 +1,28 @@
+//crear una base de datos
+use("baticell_store")
+
+//Insertar más de un documento a una colección
+db.productos.insertMany(
+    [
+        {
+            _id: 1,
+            name: "Xiaomi",
+            precio: 2450
+        },
+
+        {
+            _id: 2,
+            name: "Honor",
+            precio: 2600
+        },
+
+        {
+            _id: 3,
+            name: "Oppo",
+            precio: 3000
+        }
+    ]
+)
+
+//Listar documentos
+db.productos.find()

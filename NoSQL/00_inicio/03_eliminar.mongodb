@@ -1,0 +1,6 @@
+//Crear una base de datos
+use("baticell_store")
+
+//Eliminar todos los documentos de una colección(al borrar todos
+//los documentos ya no existira la base de datos)
+db.productos.drop()

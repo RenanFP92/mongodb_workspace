@@ -1,0 +1,55 @@
+//Crear una base de datos (para que pueda existir debe tener una colección)
+use("dbClothingStore")
+
+//Creando una colección "productos" agregandole documentos
+db.clientes.insertMany(
+    [
+        {
+            _id: "C001",
+            nombre: "Juan",
+            apellido: "Pérez",
+            fechaNacimiento: "15/05/1990",
+            email: "juan.perez@gmail.com",
+            categoriaInteres: ["Ropa Formal", "Camisas" , "Hombres"],
+        },
+
+        {
+            _id: "C002",
+            nombre: "Ana",
+            apellido: "Gómez",
+            fechaNacimiento: "",
+            email: "ana.gomez@outlook.com",
+            categoriaInteres: ["Ropa Casual", "Vestidos", "Mujeres", "Accesorios"],
+        },
+
+        {
+            _id: "C003",
+            nombre: "Luis",
+            apellido: "Martínez",
+            fechaNacimiento: "30/11/1988",
+            email: "",
+            categoriaInteres: [],
+        },
+
+        {
+            _id: "C004",
+            nombre: "María",
+            apellido: "López",
+            fechaNacimiento: "17/02/1988",
+            email: "maria.lopez@yahoo.com",
+            categoriaInteres: ["Ropa de Invierno", "Chompas"],            
+        },
+
+        {
+            _id: "C005",
+            nombre: "Sofía",
+            apellido: "Ramírez",
+            fechaNacimiento: "25/09/1993",
+            email: "sofia.ramirez@outlook.com",
+            categoriaInteres: ["Ropa Casual", "Accesorios", "Mujeres"],
+        }    
+    ]
+)
+
+//Listar documentos de la coleccion "clientes"
+db.clientes.find()

@@ -1,0 +1,50 @@
+//Crear una base de datos (para que pueda existir debe tener una colección)
+use("dbClothingStore")
+
+//Creando una colección "productos" agregandole documentos
+db.prendas.insertMany(
+    [
+        {
+            nombre: "Camisa Formal",
+            marca: "H&M",
+            categorias: ["Ropa formal","Camisas","Hombres"],
+            stock: 50,
+            precioUnitario:35.50,
+        },
+
+        {
+            nombre: "Pantalones Jeans",
+            marca: "Levi's",
+            categorias: ["Ropa Casual", "Pantalones", "Unisex"],
+            stock: 100,
+            precioUnitario: 45.00,
+        },
+
+        {
+            nombre: "Vestido de Verano",
+            marca: "Zara",
+            categorias: ["Ropa casual", "Vestidos", "Mujeres"],
+            stock: 30,
+            precioUnitario: 29.99,
+        },
+
+        {
+            nombre: "Chompa de Lana",
+            marca: "Uniglo",
+            categorias: ["Ropa de invierno", "Chompas", "Unisex, Mujeres"],
+            stock: 75,
+            precioUnitario: 89.99,       
+        },
+
+        {
+            nombre: "Casaca de Cuero",
+            marca: "Gucci",
+            categorias: ["Ropa de invierno", "Unisex"],
+            stock: 20,
+            precioUnitario: 299.99,
+        }
+    ]
+)
+
+//Listar documentos de la colección prendas
+db.prendas.find()

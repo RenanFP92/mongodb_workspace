@@ -1,0 +1,17 @@
+//Poner base de datos en uso
+use("sample_mflix")
+
+//Listar las colecciones de una BD que sería como las tablas en SQL Server 
+db.getCollectionNames()
+
+//Listar los documentos de la colección movies
+db.movies.find()
+
+//Cantidad de documentos de la colección movies
+db.movies.find().count()
+
+//Muestra la cantidad de documentos cuyo país (country) es USA
+db.movies.find({countries: "USA"}).count()
+
+//Mostarar los documentos donde el país sea USA
+db.movies.find({countries: "USA"})

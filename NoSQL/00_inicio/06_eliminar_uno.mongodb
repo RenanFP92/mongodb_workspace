@@ -1,0 +1,23 @@
+//Crear una base de datos
+use("baticell_store")
+
+//Eliminar el documento cuyo id es 3
+db.productos.deleteOne(
+    { 
+        _id: 3 
+    }
+)
+
+//Eliminar todos los documentos que tengan el mismo 
+//atributo con el mismo nombre
+db.productos.deleteMany(
+    { 
+        nombre: "Xiaomi" 
+    }
+)
+//Si pusiera db.productos.deleteOne({ 
+  /*       nombre: "Xiaomi" 
+    }) eliminaria los documentos con nombre xiaomi pero solo el
+    primero que encuentre */
+//Listar los documentos
+db.productos.find()

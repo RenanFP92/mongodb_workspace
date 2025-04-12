@@ -1,0 +1,33 @@
+//Usando la base de datos
+use("dbClothingStore")
+
+//Actualice el nombre del Vestido de Verano por Vestido Elegante
+// db.prendas.updateOne(
+//     {nombre: "Vestido de Verano"},
+//     {$set: {nombre: "Vestido Elegante"}}
+// )
+
+//Actualice el precio de la Casaca de cuero de 299 a 799.
+/* db.prendas.updateOne(
+    {nombre: "Casaca de Cuero"},
+    {$set: {precioUnitario: 799}}
+) */
+ 
+//Listar colección prendas para verificar los cambios
+/* db.prendas.find() */
+
+//Actualice la fecha de nacimiento de Ana Gómez por 06/06/2006
+
+/* db.clientes.updateOne(
+    {nombre: "Ana", apellido: "Gómez"},
+    {$set: {fechaNacimiento: "06/06/2006"}} 
+) */
+
+//Actualice el número de email de Juan Pérez por: juan.pe@yahoo.com
+db.clientes.updateOne(
+    {nombre: "Juan", apellido: "Pérez"},
+    {$set: {email: "juan.pe@yahoo.com"}} 
+)
+
+//Listar colección clientes para verificar los cambios
+db.clientes.find() 
